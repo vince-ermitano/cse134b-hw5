@@ -4,50 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Experimenting</title>
-    <script src="./assets/js/hamburger-menu.js"></script>
+    <title>Button Count</title>
+    <script src="./assets/js/ButtonCount.js"></script>
+    <script src="./assets/js/hamburger-menu.js" defer></script>
     <link rel="stylesheet" href="./assets/css/myStyle.css" media="screen" type="text/css">
-    <script src="./assets/js/methodtest.js"></script>
     <script src="https://kit.fontawesome.com/8cc61868ab.js" crossorigin="anonymous" defer></script>
 
     <style>
         main {
             height: 100vh;
-        }
-
-        form {
             text-align: center;
-            padding: 1rem;
-            padding-top: 2rem;
-        }
-
-        form input {
-            margin-bottom: 1.5rem;
-        }
-
-        textarea, label, input {
-            display: block;
-            margin: 0 auto;
-            border-radius: 5%;
-        }
-
-        http-btn-group {
-            display: block;
-            margin: 1rem;
-            text-align: center;
-        }
-
-        http-btn-group button {
-            margin: 0 1rem;
-        }
-        output {
-            display: block;
-            margin: 2rem;
-        }
-
-        output pre {
-            background-color: white;
-            border-radius: 1rem 1rem;
         }
     </style>
 </head>
@@ -101,32 +67,19 @@
             <li><a href="webcomponent.html" title="Go to Web Component Page">Web Component</a></li>
         </ul>
     </div>
+
     <main>
-        <form id="httpForm">
-            <label for="idFld">Identification #</label>
-            <input type="number" name="idFld" id="idFld" maxLength:="15" required>
-            <label for="articleNameFld">Article Name</label>
-            <input type="text" name="articleNameFld" id="articleNameFld" maxLength:="50" required>
-            <label for="articleBodyFld">Article Name</label>
-            <textarea name="articleBodyFld" id="articleBodyFld" cols="50" rows="10" required maxLength="32000"></textarea>
-        </form>
-        <http-btn-group>
-            <button id="postBtn" type="submit" form="httpForm">postBtn</button>
-            <button id="getBtn" type="submit" form="httpForm">getBtn</button>
-            <button id="putBtn" type="submit" form="httpForm">putBtn</button>
-            <button id="deleteBtn" type="submit" form="httpForm">deleteBtn</button>
-        </http-btn-group>
-    
-        <output>
-            <h2>Response:</h2>
-            <pre></pre>
-        </output>
+        <button-count></button-count>
+        <button-count></button-count>
+        <button-count></button-count>
     </main>
 
     <footer>
         <icon-group>
             <i class="fa-brands fa-github" onclick="window.open('https://github.com/','_blank')"></i>
             <i class="fa-brands fa-linkedin" onclick="window.open('https://github.com/','_blank')"></i>
+            <!-- <a href="https://github.com/vince-ermitano" target="_blank" title="Go to Vince's Github"><img src="./assets/images/github-png-icon-free-download-813498.png" alt="Link to Vince's Github" width="25"></a>
+            <a href="https://www.linkedin.com/in/vince-ermitano-014992223/" target="_blank" title="Go to Vince's LinkedIn"><img src="./assets/images/linkedin-icon.png" alt="Link to Vince's LinkedIn" width="25"></a> -->
         </icon-group>
     </footer>
 </body>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experimenting</title>
+    <script src="./assets/js/hamburger-menu.js"></script>
+    <link rel="stylesheet" href="./assets/css/myStyle.css" media="screen" type="text/css">
+    <script src="./assets/js/methodtest.js"></script>
+
+    <style>
+        main {
+            height: 100vh;
+        }
+
+        form {
+            text-align: center;
+            padding: 1rem;
+            padding-top: 2rem;
+        }
+
+        form input {
+            margin-bottom: 1.5rem;
+        }
+
+        textarea, label, input {
+            display: block;
+            margin: 0 auto;
+        }
+
+        http-btn-group {
+            display: block;
+            margin: 1rem;
+            text-align: center;
+        }
+
+        http-btn-group button {
+            margin: 0 1rem;
+        }
+        output {
+            display: block;
+            margin: 2rem;
+        }
+
+        output pre {
+            background-color: white;
+            border-radius: 1rem 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <figure>
+            <a href="index.html">
+                <img src="./assets/images/small-prof-pic.png" alt="Image of logo (click to go to homepage)" width="30">
+                <span>Vince Ermitano</span>
+            </a> 
+        </figure>
+
+        <nav class="desktop">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html" title="Go to Projects Page">Projects</a></li>
+                <li class="forHW2"><a href="experimental.html" title="Go to Experimental Page">Experimental</a></li>
+                <li><a href="about.html" title="Go to About Page">About Me</a></li>
+                <li><a href="contact.html" title="Go to Contact Page">Contact</a></li>
+                <li><a href="methodtest.html" title="Go to HTTP Requests Page">HTTP Requests</a></li>
+            </ul>
+        </nav>
+
+        <nav class="nav-mobile">
+            <!-- <input type="checkbox" name="" id="check" /> -->
+            <div id="menu">
+                <div id=bar1 class="bar"></div>
+                <div id=bar2 class="bar"></div>
+                <div id=bar3 class="bar"></div>
+            </div>
+            <!-- <div class="menu-bg">
+                <ul>
+                    <li><a href="index.html" title="Go to Homepage">Home</a></li>
+                    <li><a href="projects.html" title="Go to Projects Page">Projects</a></li>
+                    <li><a href="about.html" title="Go to About Page">About Me</a></li>
+                    <li><a href="contact.html" title="Go to Contact Page">Contact</a></li>
+                </ul>
+            </div> -->
+        </nav>
+    </header>
+    
+    <!-- Update with hamburger menu in JS iteration -->
+    <div id="menu-no-animation" style="display: none">
+        <ul>
+            <li><a href="index.html" title="Go to Homepage">Home</a></li>
+            <li><a href="projects.html" title="Go to Projects Page">Projects</a></li>
+            <li><a href="about.html" title="Go to About Page">About Me</a></li>
+            <li><a href="contact.html" title="Go to Contact Page">Contact</a></li>
+        </ul>
+    </div>
+    <main>
+        <form id="httpForm">
+            <label for="idFld">Identification #</label>
+            <input type="number" name="idFld" id="idFld" maxLength:="15" required>
+            <label for="articleNameFld">Article Name</label>
+            <input type="text" name="articleNameFld" id="articleNameFld" maxLength:="50" required>
+            <label for="articleBodyFld">Article Name</label>
+            <textarea name="articleBodyFld" id="articleBodyFld" cols="50" rows="10" required maxLength="32000"></textarea>
+        </form>
+        <http-btn-group>
+            <button id="postBtn" type="submit" form="httpForm">postBtn</button>
+            <button id="getBtn" type="submit" form="httpForm">getBtn</button>
+            <button id="putBtn" type="submit" form="httpForm">putBtn</button>
+            <button id="deleteBtn" type="submit" form="httpForm">deleteBtn</button>
+        </http-btn-group>
+    
+        <output>
+            <h2>Response:</h2>
+            <pre></pre>
+        </output>
+    </main>
+</body>
+</html>
